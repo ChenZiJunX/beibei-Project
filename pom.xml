@@ -1,0 +1,42 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.beibei</groupId>
+    <artifactId>beibei-parent</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>beibei-manager</artifactId>
+  <packaging>pom</packaging>
+  
+  <!--依赖管理-->
+    <dependencies>
+        <dependency>
+            <groupId>com.beibei</groupId>
+            <artifactId>beibei-common</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+    
+    <build>
+        <!--配置Tomcat插件-->
+        <plugins>
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <configuration>
+                    <port>8080</port>
+                    <path>/</path>
+                    <uriEncoding>UTF-8</uriEncoding>
+                </configuration>
+            </plugin>
+        </plugins>
+
+    </build>
+  
+    <modules>
+    	<module>beibei-manager-pojo</module>
+    	<module>beibei-manager-mapper</module>
+    	<module>beibei-manager-service</module>
+    	<module>beibei-manager-web</module>
+    </modules>
+</project>

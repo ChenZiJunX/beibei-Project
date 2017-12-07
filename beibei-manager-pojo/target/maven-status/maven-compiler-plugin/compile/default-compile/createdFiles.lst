@@ -1,0 +1,11 @@
+com\beibei\pojo\TbItem.class
+com\beibei\pojo\TbContent.class
+com\beibei\pojo\TbUser.class
+com\beibei\pojo\TbItemParam.class
+com\beibei\pojo\TbItemParamItem.class
+com\beibei\pojo\TbContentCategory.class
+com\beibei\pojo\TbOrder.class
+com\beibei\pojo\TbOrderItem.class
+com\beibei\pojo\TbOrderShipping.class
+com\beibei\pojo\TbItemCat.class
+com\beibei\pojo\TbItemDesc.class

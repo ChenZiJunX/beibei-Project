@@ -1,0 +1,4 @@
+com\beibei\service\impl\TbItemCatServiceImpl.class
+com\beibei\service\ITbItemCatService.class
+com\beibei\service\ITbItemService.class
+com\beibei\service\impl\TbItemServiceImpl.class

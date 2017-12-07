@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+		PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+		"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<!-- 引入实体映射文件 -->
+	<mappers>
+		<mapper resource="mapper/TbContentCategoryMapper.xml"/>
+		<mapper resource="mapper/TbContentMapper.xml"/>
+		<mapper resource="mapper/TbItemCatMapper.xml"/>
+		<mapper resource="mapper/TbItemDescMapper.xml"/>
+		<mapper resource="mapper/TbItemMapper.xml"/>
+		<mapper resource="mapper/TbItemParamItemMapper.xml"/>
+		<mapper resource="mapper/TbItemParamMapper.xml"/>
+		<mapper resource="mapper/TbOrderItemMapper.xml"/>
+		<mapper resource="mapper/TbOrderMapper.xml"/>
+		<mapper resource="mapper/TbOrderShippingMapper.xml"/>
+		<mapper resource="mapper/TbUserMapper.xml"/>
+	</mappers>
+</configuration>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.beibei.mapper.TbItemMapper" >
+  <resultMap id="BaseResultMap" type="com.beibei.pojo.TbItem" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="title" property="title" jdbcType="VARCHAR" />
+    <result column="sell_point" property="sellPoint" jdbcType="VARCHAR" />
+    <result column="price" property="price" jdbcType="BIGINT" />
+    <result column="num" property="num" jdbcType="INTEGER" />
+    <result column="barcode" property="barcode" jdbcType="VARCHAR" />
+    <result column="image" property="image" jdbcType="VARCHAR" />
+    <result column="cid" property="cid" jdbcType="BIGINT" />
+    <result column="status" property="status" jdbcType="TINYINT" />
+    <result column="created" property="created" jdbcType="TIMESTAMP" />
+    <result column="updated" property="updated" jdbcType="TIMESTAMP" />
+  </resultMap>
+  
+  <!-- 根据商品id查询商品信息 -->
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long">
+  	SELECT id,title,sell_point,price,num,barcode,image,cid,status,created,updated FROM tb_item WHERE id=#{id}
+  </select>
+  
+  
+  <!-- 查询所有商品信息 -->
+  <select id="selectAllPages" resultMap="BaseResultMap" parameterType="com.beibei.utils.PageBean">
+  	SELECT id,title,sell_point,price,num,barcode,image,cid,status,created,updated FROM tb_item
+  	LIMIT #{offset},#{pageSize}
+  </select>
+  
+  <!-- 查询商品总数量 -->
+  <select id="countByPrimaryKey" resultType="java.lang.Long">
+  	SELECT COUNT(id) FROM tb_item
+  </select>
+  
+</mapper>
